@@ -1,0 +1,14 @@
+div(ng-controller='HomeController as newPoll')
+	md-card
+		md-content.md-padding
+			h3 Create a new poll
+			form(no-validate)
+				md-input-container
+					label Poll Name
+					input(ng-model="poll.name")
+				md-input-container(ng-repeat='choice in poll.choices')
+					label Choice {{$index+1}}
+					input(ng-model='choice.name' ng-model-options="{ debounce: 350 }")
+			div
+				//input(type='button' class='btn' ng-click='log()' value='Add choice')
+				md-button(class='md-raised md-primary pull-right' ng-click='addPoll()') Submit
