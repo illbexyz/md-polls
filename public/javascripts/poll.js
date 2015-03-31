@@ -51,10 +51,10 @@ pollModule.controller('NewPollController', ['$scope', '$location', '$http', func
       }
     });
     toSave.choices = choicesToSave;
-    /*$http.post('/api/polls', toSave).success(function(data){
+    $http.post('/api/polls', toSave).success(function(data){
       console.log("Saved a new poll: ", data);
       $location.path('/polls/' + data);
-    });*/
+    });
     console.log(toSave);
   };
 
