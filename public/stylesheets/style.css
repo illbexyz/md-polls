@@ -54,6 +54,7 @@ html{
 }
 
 .chart-legend {
+	display: none;
 	position: relative;
 	left: -48px;
 	white-space: nowrap;
