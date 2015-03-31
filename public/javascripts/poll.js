@@ -94,7 +94,11 @@ pollModule.controller('PollController', ['$scope', '$timeout', '$interval', '$ro
       });
     };
 
+    $scope.updateData = function(){
+      $scope.poll = Polls.get({id:$routeParams.id});
+    }
+
     $timeout($scope.refreshChart, 1000);
-    $interval($scope.refreshChart, 5000);
+    $interval($scope.updateData, 5000);
 
   }]);
