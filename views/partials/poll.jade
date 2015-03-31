@@ -1,0 +1,21 @@
+md-card
+	md-content.md-padding
+		form(novalidate ng-submit='vote(sel)' layout='column')
+			h3 {{poll.name}}
+			div(layout='row' layout-sm='column').poll-content
+				div(layout='column')
+					div(flex)
+					md-radio-group(ng-model='sel')
+						div(ng-repeat='choice in poll.choices').repeat-animate
+							label(ng-style='{"color": colors[$index].color}')
+								md-radio-button(value='{{$index}}') {{choice.name}}
+					div(flex)
+				div(flex)
+				div(layout='row')
+					cjs-doughnut.chart.chart-doughnut(dataset='chartData' options='chartOptions')
+					div.chart-legend
+						div(ng-repeat='choice in poll.choices')
+							p
+								span.legend-color(ng-style='{"background-color": colors[$index].color, "color": colors[$index].color}')
+								span.legend-label  {{choice.name}}
+			input(type='submit' value='Vote' class='md-button md-raised md-primary md-default-theme pull-right')

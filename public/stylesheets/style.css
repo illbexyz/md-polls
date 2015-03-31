@@ -6,13 +6,13 @@
 
 @media (min-width: 992px){
 	.container {
-	  width: 970px;
+	  width: 900px;
 	}
 }
 
 @media (min-width: 1200px){
 	.container {
-	  width: 1170px;
+	  width: 900px;
 	}
 }
 
@@ -26,7 +26,6 @@ html{
 
 .chart{
 	display: block;
-	margin-top: 75px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -44,3 +43,62 @@ html{
 .pull-right{
 	float: right;
 }
+
+.poll-content{
+	margin-bottom: 50px;
+}
+
+.view-animate{
+	position: relative;
+	display: block;
+}
+
+.chart-legend {
+	position: relative;
+	left: -48px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 80px;
+}
+
+.chart-legend p {
+	line-height: 20px;
+}
+
+.legend-color{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+}
+
+.legend-label{
+	
+}
+
+.view-animate.ng-enter, .view-animate.ng-leave {
+	-webkit-transition: 0.3s ease-in all; /* Chrome */
+	transition: 0.3s ease-in all;
+}
+
+.view-animate.ng-enter {
+	opacity: 0;
+	top: -20px;
+}
+
+.view-animate.ng-enter-active {
+	opacity: 1;
+	top: 0px;
+}
+
+.view-animate.ng-leave {
+	display: none;
+	top: 0px;
+}
+
+.view-animate.ng-leave-active{
+	opacity: 0;
+	top: -20px;
+}
+

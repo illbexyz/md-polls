@@ -16,7 +16,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-app.use(favicon());
+//app.use(favicon());
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
@@ -27,7 +27,7 @@ app.use('/static', express.static(__dirname + '/node_modules/'));
 app.use('/', routes);
 app.use('/partials', partials);
 app.use('/api', api);
-//app.use('*', routes);
+app.use('*', routes);
 //app.use('/users', users);
 
 /// catch 404 and forwarding to error handler

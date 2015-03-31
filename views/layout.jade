@@ -5,13 +5,14 @@ html(ng-app='Poll')
 		link(rel="stylesheet" href="/static/angular-material/angular-material.min.css")
 		link(href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css')
 		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel="icon" href="/images/favicon.png")
 		script(type='text/javascript' src='/static/angular/angular.min.js')
 		script(type='text/javascript' src='/static/angular-route/angular-route.min.js')
 		script(type='text/javascript' src='/static/angular-resource/angular-resource.min.js')
 		script(type='text/javascript' src='/static/angular-animate/angular-animate.min.js')
 		script(type='text/javascript' src='/static/angular-aria/angular-aria.min.js')
 		script(type='text/javascript' src='/static/angular-material/angular-material.min.js')
-		//script(type='text/javascript' src='/static/angular-chartjs/dist/Chart.min.js')
+		script(type='text/javascript' src='/static/angular-chartjs/dist/Chart.min.js')
 		script(type='text/javascript' src='/static/angular-chartjs/dist/angular-chartjs.min.js')
 		script(src='/javascripts/poll.js')
 		base(href='/')
@@ -19,8 +20,7 @@ html(ng-app='Poll')
 		md-toolbar
 			div.container
 				div.md-toolbar-tools
-					a(ng-href='/' class='md-button logo') Help Me Studying
+					a(ng-href='/' class='md-button logo') Md Polls
 					md-divider
 					span(flex)
-					a(ng-href='/new' class='md-button') New
 		block content
